@@ -13,8 +13,6 @@ export const MultipleCustomHooks = () => {
     // Custom Hook
     const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`);
 
-    console.log(counter);
-
     // If there is data we will destructur author, quote
     const { author, quote } = !!data && data[0];
 
