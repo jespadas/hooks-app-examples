@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react';
 import { todoReducer } from './todoReducer';
 
 import { TodoList } from './TodoList';
-import { TodoAdd } from './TodoAdd';
+import { AddForm } from './AddForm';
 import './styles.css';
 
 const init = () => {
@@ -69,7 +69,7 @@ export const TodoApp = () => {
 
                 <div className="col-5">
 
-                    <TodoAdd
+                    <AddForm
                         handleAddTodo={handleAddTodo}
                     />
 
