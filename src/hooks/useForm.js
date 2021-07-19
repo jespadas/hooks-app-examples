@@ -5,6 +5,10 @@ export const useForm = (initialState) => {
     // Initial state passed
     const [values, setValues] = useState(initialState);
 
+    const reset = () => {
+        setValues(initialState);
+    }
+
     // Function to uptade values in state
     const handleInputChange = ({ target }) => {
 
@@ -15,6 +19,6 @@ export const useForm = (initialState) => {
 
     };
 
-    return [values, handleInputChange];
+    return [values, handleInputChange, reset];
 
 };
