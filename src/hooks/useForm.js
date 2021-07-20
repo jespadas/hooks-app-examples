@@ -1,13 +1,9 @@
 import { useState } from 'react';
 
-export const useForm = (initialState) => {
+export const useForm = (initialState = {}) => {
 
     // Initial state passed
     const [values, setValues] = useState(initialState);
-
-    const reset = () => {
-        setValues(initialState);
-    }
 
     // Function to uptade values in state
     const handleInputChange = ({ target }) => {
@@ -19,6 +15,14 @@ export const useForm = (initialState) => {
 
     };
 
-    return [values, handleInputChange, reset];
+    const reset = () => {
+        setValues(initialState);
+    }
+
+    return [
+        values,
+        handleInputChange,
+        reset
+    ];
 
 };
