@@ -4,7 +4,7 @@ export const useFetch = (url) => {
 
     const isMounted = useRef(true);
 
-    const [state, setstate] = useState({
+    const [state, setState] = useState({
         data: null,
         loading: true,
         error: null
@@ -18,7 +18,7 @@ export const useFetch = (url) => {
 
     useEffect(() => {
 
-        setstate({
+        setState({
             data: null,
             loading: true,
             error: null
@@ -29,20 +29,22 @@ export const useFetch = (url) => {
             .then(data => {
 
                 // stop error for calling mounted and unmounted component
-                setTimeout(() => {
-
-                    if (isMounted.current) {
-                        setstate({
-                            loading: false,
-                            error: null,
-                            data: data
-                        })
-                    }
-
-                }, 4000);
+                if (isMounted.current) {
+                    setState({
+                        loading: false,
+                        error: null,
+                        data: data
+                    });
+                }
 
             })
-            .catch(e => console.log(e));
+            .catch(e => {
+                setState({
+                    data: null,
+                    loading: false,
+                    error: "Data cannot be fetched"
+                });
+            });
 
     }, [url])
 

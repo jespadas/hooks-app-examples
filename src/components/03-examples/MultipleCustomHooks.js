@@ -8,7 +8,7 @@ import './style.css';
 export const MultipleCustomHooks = () => {
 
     // Custom Hook
-    const { counter, increment } = useCounter(1);
+    const { counter, increment } = useCounter(0);
 
     // Custom Hook
     const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`);
@@ -23,7 +23,8 @@ export const MultipleCustomHooks = () => {
             <hr />
 
             {
-                loading ?
+                loading
+                    ?
                     (
                         <div className="alert alert-primary">
                             Loading...

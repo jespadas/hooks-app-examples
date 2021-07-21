@@ -3,7 +3,7 @@ import { act, renderHook } from '@testing-library/react-hooks';
 
 import { useForm } from "../../hooks/useForm";
 
-describe('Test in useForm.js', () => {
+describe('Test in <useForm />', () => {
 
     const initialForm = {
         name: "Julio",
