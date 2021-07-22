@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <TodoHeader /> Should be displayer correctly 1`] = `
+<Fragment>
+  <h1>
+    TodoApp (
+    2
+    )
+  </h1>
+  <hr />
+</Fragment>
+`;

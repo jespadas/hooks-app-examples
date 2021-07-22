@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test on HookApp.js Must show <HookApp /> properly 1`] = `
+exports[`Test on <HookApp /> Must show <HookApp /> properly 1`] = `
 <div>
   <h1>
     Hola mundo
