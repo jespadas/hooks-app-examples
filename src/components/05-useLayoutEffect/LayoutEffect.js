@@ -7,6 +7,12 @@ import './style.css';
 
 export const Layout = () => {
 
+    /*
+        useLayoutEffect hook takes a function called effect as its first argument
+        and an array of dependencies as second argument. The first argument, effect, 
+        either returns a cleanup function or undefined.
+    */
+
     // Custom Hook
     const { counter, increment } = useCounter(1);
 

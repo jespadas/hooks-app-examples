@@ -5,6 +5,13 @@ import { Message } from './Message';
 
 export const SimpleForm = () => {
 
+    /*     
+        useEffect(callback, dependencies) is the hook that manages the side
+        - effects in functional components.callback argument is a function
+        to put the side - effect logic.dependencies is a list of dependencies
+        of your side - effect: being props or state values.
+     */
+
     const [formSate, setFormSate] = useState({
         name: "",
         email: ""
